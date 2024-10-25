@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokky Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- start NAV -->
+        <nav class="nav container">
+            <h1 id="logo">Kokky Store</h1>
+            <div>
+                <i class="fa fa-shopping-cart" id="cart-icon"></i>
+                <span class="quantity">0</span>
+            </div>
+        </nav>
+        <!-- end NAV -->
+        <!-- start cart -->
+        <div class="cart">
+            <h2>Your cart</h2>
+            <i class="fa fa-window-close" id="cart-close"></i>
+            <!-- start List -->
+            <div class="list">
+                <ul class="cart-list"></ul>
+            </div>
+            <!-- end List -->
+            <!-- Start Total -->
+            <div class="totalDiv">
+                <div class="total-title">Total: <span class="total-price">0</span></div>
+                <button class="btn btn-primary" id="buy-now-btn">Buy Now</button>
+            </div>
+            <!-- end Total -->
+        </div>
+        <!-- end cart -->
+    </header>
+
+    <section>
+        <!-- Products Section -->
+        <div class="content container">
+            <!-- The products will be dynamically loaded here using JavaScript -->
+        </div>
+    </section>
+
+    <!-- Buy Now Form Modal -->
+    <div class="form-modal" id="buy-now-form">
+        <form id="checkout-form">
+            <h2>Checkout Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required pattern="^[A-Za-z\s]+$">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9\s\-]{10,15}$">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-danger" id="close-form">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kokky Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
