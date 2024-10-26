@@ -39,7 +39,7 @@ function initApp() {
         newDiv.classList.add("product-box");
         newDiv.innerHTML = `
             <h2 class="m-2">${value.name}</h2>
-            <img src="images/${value.image}" />
+            <img src="Images/${value.image}" />
             <span class="m-2">EGP ${value.price}</span>
             <button class="btn btn-warning d-block m-2" onclick="addToCart(${value.id})">Add to Cart</button>
         `;
@@ -73,13 +73,13 @@ function updateCart() {
         let newLi = document.createElement("li");
         newLi.classList.add("box");
         newLi.innerHTML = `
-            <div><img src="images/${item.image}"></div>
+            <div><img src="Images/${item.image}"></div>
             <div class="title m-2">${item.name}</div>
             <div class="title m-2">EGP ${item.price}</div>
             <div class="change">
-                <button class="btn btn-light p-1" onclick="changeQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                <button class="btn btn-dark p-1" onclick="changeQuantity(${item.id}, ${item.quantity + 1})">+</button>
                 <div>${item.quantity}</div>
-                <button class="btn btn-light p-1" onclick="changeQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                <button class="btn btn-dark p-1" onclick="changeQuantity(${item.id}, ${item.quantity - 1})">-</button>
             </div>
         `;
         cartList.appendChild(newLi);
